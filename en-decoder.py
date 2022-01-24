@@ -40,6 +40,7 @@ def again_encoder():
 #call the encoder function
 encoder()
 
+
 def decoder():
     #ask for the string, that is supposed to be decoded
     message_encoded = input(str(name + " what word would you like to decode?: "))
@@ -53,3 +54,13 @@ def decoder():
     print("Ok "+name+" the string "+message_encoded+" decoded is:")
     time.sleep(3)
     print(message_decoded)
+    again_decode()
+
+def again_decode():
+    again_d = input(str("Do you want to decode another word?: "))
+    again_d_lower = again_d.lower()
+    if again_d_lower == "yes":
+        decoder()
+    elif again_d_lower == "no":
+        print("Until next time "+name+" and never look back.")
+        exit()
